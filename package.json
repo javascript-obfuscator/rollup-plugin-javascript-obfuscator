@@ -1,0 +1,38 @@
+{
+  "name": "rollup-plugin-javascript-obfuscator",
+  "version": "1.0.0",
+  "description": "Plugin for Rollup to obfuscate JS code",
+  "main": "dist/rollup-plugin-javascript-obfuscator.cjs.js",
+  "jsnext:main": "dist/rollup-plugin-javascript-obfuscator.es.js",
+  "scripts": {
+    "test": "jest",
+    "pretest": "npm run build",
+    "coverage": "npm test -- --coverage",
+    "build": "rollup -c -f cjs -o dist/rollup-plugin-javascript-obfuscator.cjs.js && rollup -c -f es -o dist/rollup-plugin-javascript-obfuscator.es.js",
+    "prebuild": "rm -rf dist/*"
+  },
+  "keywords": [
+    "rollup",
+    "rollup-plugin",
+    "config",
+    "node-config"
+  ],
+  "author": "Wain-PC",
+  "license": "MIT",
+  "devDependencies": {
+    "coveralls": "^2.13.1",
+    "jest": "^20.0.4",
+    "rollup": "^0.45.2",
+    "rollup-plugin-buble": "^0.15.0"
+  },
+  "dependencies": {
+    "javascript-obfuscator": "^0.10.1"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "dist/rollup-plugin-javascript-obfuscator.cjs.js"
+    ],
+    "coverageDirectory": "dist/coverage"
+  }
+}
