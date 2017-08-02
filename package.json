@@ -14,8 +14,9 @@
   "keywords": [
     "rollup",
     "rollup-plugin",
-    "config",
-    "node-config"
+    "obfuscate",
+    "obfuscation",
+    "javascript-obfuscator"
   ],
   "author": "Wain-PC",
   "license": "MIT",
