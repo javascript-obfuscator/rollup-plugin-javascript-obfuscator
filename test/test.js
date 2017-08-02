@@ -8,7 +8,7 @@ const testFunc = function (entry, configValue, expectedValue, expectedSourceMap)
 	return function () {
 		expect.assertions(2);
 		return rollup.rollup({
-			entry: `./test/fixtures/${entry}.js`,
+			entry: `./fixtures/${entry}.js`,
 			plugins: [
 				obfuscatorPlugin(configValue)
 			]

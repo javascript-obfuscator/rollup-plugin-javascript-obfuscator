@@ -1,10 +1,10 @@
 import JavaScriptObfuscator from 'javascript-obfuscator';
 
-export default function replaceConfig(options = {}) {
+export default function javascriptObfuscator(options = {}) {
 	return {
 		name: 'javascript-obfuscator',
 
-		transform(code) {
+		transformBundle(code) {
 			const obfuscationResult = JavaScriptObfuscator.obfuscate(String(code), options);
 			let result = {code: obfuscationResult.getObfuscatedCode()};
 
