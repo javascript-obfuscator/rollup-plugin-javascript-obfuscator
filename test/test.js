@@ -13,7 +13,7 @@ const testFunc = function (entry, configValue, expectedValue, expectedSourceMap)
 				obfuscatorPlugin(configValue)
 			]
 		}).then(function (bundle) {
-			return bundle.generate({format: 'es'}).then(function (res) {
+			return bundle.generate({format: 'es', sourceMap: !!expectedSourceMap}).then(function (res) {
 				expect(res.code).toContain(expectedValue);
 				if (expectedSourceMap) {
 					expect(res.map).toBeInstanceOf(Object);

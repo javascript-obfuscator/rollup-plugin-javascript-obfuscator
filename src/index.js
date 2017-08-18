@@ -5,7 +5,7 @@ export default function javascriptObfuscator(options = {}) {
 		name: 'javascript-obfuscator',
 
 		transformBundle(code) {
-			const obfuscationResult = JavaScriptObfuscator.obfuscate(String(code), options);
+			const obfuscationResult = JavaScriptObfuscator.obfuscate(code, options);
 			let result = {code: obfuscationResult.getObfuscatedCode()};
 
 			if (options.sourceMap && options.sourceMapMode !== 'inline') {
