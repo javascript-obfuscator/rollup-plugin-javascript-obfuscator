@@ -29,8 +29,7 @@ const testFunc = function (entry, configValue, expectedValue, expectedSourceMap)
 describe('rollup-plugin-javascript-obfuscator', function () {
 	it('obfuscates the code', testFunc('simple', {}, 'console.log("Hello, world!");'));
 
-	//TODO: make this work. Strange stuff...
-	it.skip('generates source maps correctly', testFunc('simple', {sourceMap: true}, 'console.log("Hello, world!");', true));
+	it('generates source maps correctly', testFunc('simple', {sourceMap: true}, 'console.log("Hello, world!");', true));
 
 	it('generates inline source maps correctly', testFunc('simple', {
 		sourceMap: true,
