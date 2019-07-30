@@ -4,7 +4,7 @@ export default function javascriptObfuscator(options = {}) {
 	return {
 		name: 'javascript-obfuscator',
 
-		transformBundle(code) {
+		renderChunk(code) {
 			const obfuscationResult = JavaScriptObfuscator.obfuscate(code, options);
 			let result = {code: obfuscationResult.getObfuscatedCode()};
 
