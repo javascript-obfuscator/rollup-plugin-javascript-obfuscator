@@ -4,12 +4,12 @@ const pkg = require( './package.json' ),
 	external = Object.keys( pkg.dependencies );
 
 export default {
-	entry: 'src/index.js',
-	targets: [
-		{ dest: pkg.main, format: 'cjs' },
-		{ dest: pkg.module, format: 'es' }
+  input: 'src/index.js',
+  output: [
+		{ file: pkg.main, format: 'cjs' },
+    { file: pkg.module, format: 'esm' }
 	],
 	plugins: [ buble() ],
 	external: external,
-	sourceMap: true
+  sourcemap: true
 };
