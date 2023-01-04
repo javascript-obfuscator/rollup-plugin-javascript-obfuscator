@@ -22,7 +22,7 @@
   "license": "MIT",
   "devDependencies": {
     "coveralls": "^2.13.1",
-    "jest": "^20.0.4",
+    "jest": "^29.3.1",
     "rollup": "^0.45.2",
     "rollup-plugin-buble": "^0.15.0"
   },
